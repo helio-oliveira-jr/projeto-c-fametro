@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <locale.h>
+
+main(){
+     float salario, inss;
+     int a = 0;
+
+     do{
+		  setlocale(LC_ALL,"Portuguese");
+          printf("\nDigite o salário: ");
+          scanf("%f", &salario);
+
+          if(salario <= 1500){
+               inss = 0;
+          }else if((salario > 1500)&&(salario <= 2500)){
+               inss = salario * 20/100;
+          }else if(salario <= 4000){
+               inss = salario * 25/100;
+          }else{
+               inss = salario * 30/100;
+          }
+
+          printf("\nO salário: R$ %.2f", salario);
+          printf("\nO inss: R$ %.2f", inss);
+          if(inss == 0 )
+               printf("\nIsento");
+          else
+               printf("\nO salário final é: R$ %.2f", salario-inss);
+
+
+          printf("\nDigite 1 P/ CONTINUAR OU 0 P/ SAIR !!: ");
+          scanf("%d", &a);
+     }while(a!=0);
+/*
+
+*/
+
+}
