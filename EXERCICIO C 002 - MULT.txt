@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main (){
+
+	int var, mult, result;
+     int a = 0;
+do{
+     printf("\nDigite um numero: ");
+     scanf("%d", &var);
+
+     for(a=0; a<=10; a++){
+          printf("\n%d * %d = %d ", var, a, var*a);
+     }
+               printf("\nDigite 1 P/ CONTINUAR OU 0 P/ SAIR !!: ");
+          scanf("%d", &a);
+  }while(a!=0);
+}
